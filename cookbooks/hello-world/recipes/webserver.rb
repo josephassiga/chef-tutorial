@@ -1,4 +1,4 @@
-apt_get 'Update Caching daily' do
+apt_update 'Update Caching daily' do
     frequency 86_400
     action :periodic
 end
@@ -10,6 +10,6 @@ service 'apache2' do
    action [:start,:enable]
 end
 
-file '/var/www/html/index.html' do
-  source 'index.html.erb'
-end
+#file '/var/www/html/index.html' do
+#  source 'index.html.erb'
+#end
